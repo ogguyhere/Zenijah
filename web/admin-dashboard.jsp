@@ -26,7 +26,7 @@
     <h1>👑 Zenijah Admin</h1>
     <nav>
       <a href="index.jsp">Home</a>
-      <a href="gallery.jsp">Gallery</a>
+      <!--<a href="gallery.jsp">Gallery</a>-->
       <a href="logout.jsp">Logout</a>
     </nav>
   </header>

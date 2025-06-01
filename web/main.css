@@ -1,18 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka:wght@400;600&display=swap');
 
 /* Base Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body.dashboard {
   background: linear-gradient(135deg, #c6f6ff, #ffe9a8);
   color: #4b0049;
-  font-family: 'Comic Neue';
-  margin: 0;
-  padding: 0;
-  /*min-height: 100vh;*/
+  font-family: 'Comic Neue', cursive;
+  min-height: 100vh;
   overflow-x: hidden;
-  height: 100%;
-/*   display: flex;
-  flex-direction: column;*/
+  position: relative;
 }
+
+/* Header */
+header.dashboard-header {
+  background: linear-gradient(to right, #ffa3d7, #fddde6);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-family: 'Fredoka', sans-serif;
+  letter-spacing: 1px;
+}
+
+header.dashboard-header h1 {
+  font-size: 2.5rem;
+  text-shadow: 1px 1px #ffccf2;
+  margin: 0;
+}
+
+header.dashboard-header nav a,
+header.dashboard-header nav span {
+  color: #660066;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header.dashboard-header nav a:hover {
+  color: #ff66aa;
+  text-shadow: 0 0 8px #ffaadd;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Main Heading Image */
+.main-heading {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.main-heading img {
+  max-width: 80%;
+  height: auto;
+  border: 3px dashed #ffccff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(255, 153, 204, 0.3);
+}
+
+/* Card Styling */
+.card {
+  background: #fffaf5;
+  border: 3px dashed #ffcce6;
+  border-radius: 25px;
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(255, 153, 204, 0.4);
+}
+
+.card h2 {
+  color: #cc0077;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #660066;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+  background: linear-gradient(135deg, #ff90c2, #ffd1dc);
+  border: none;
+  padding: 12px 25px;
+  color: #4b0049;
+  border-radius: 30px;
+  font-family: 'Comic Neue', cursive;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #ffcce6;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ffcce6, #ffd6f0);
+  box-shadow: 0 0 15px #ff99cc, 0 0 25px #ffccff;
+  transform: scale(1.08);
+}
+
+.btn::after {
+  content: '✨';
+  position: absolute;
+  right: -20px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.daily-challenge-banner {
+  background-image: url('bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.daily-challenge-banner h1 {
+  color: white;
+  font-size: 64px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+
+.btn:hover::after {
+  right: 10px;
+  opacity: 1;
+}
+
 /* Input Fields */
 .input-field {
   width: 80%;
@@ -30,118 +181,7 @@ body.dashboard {
   color: #cc7ba2;
   font-style: italic;
 }
-/* Header */
-header.dashboard-header {
-   background: linear-gradient(to right, #ffa3d7, #fddde6);
-  padding: 1.5rem 2.5rem;
-  display: flex; /* Enable flex layout */
-  justify-content: space-between; /* Push h1 left and nav right */
-  align-items: center; /* Center items vertically */
-  color: #660066;
-  font-family: 'Fredoka', sans-serif;
-  letter-spacing: 1px;
-  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
-}
 
-header.dashboard-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  text-shadow: 1px 1px #ffccf2;
-}
-
-header.dashboard-header nav a {
-  color: #660066;
-  margin-left: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-header.dashboard-header nav a:hover {
-  color: #ff66aa;
-  text-shadow: 0 0 8px #ffaadd;
-}
-/* Dashboard Container */
-.dashboard-container {
-/*  display: flex;
-  flex-direction: column;*/
-  gap: 5rem;
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-/* Card Styling */
-.card {
-  background: #fffaf5;
-  border: 3px dashed #ffcce6;
-  border-radius: 25px;
-  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3);
-  padding: 2rem;
-  background-color: cadetblue;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 90%;
-  max-width: 900px;
-  text-align: center;
-}
-nav a, nav span {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #ff92df;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(255, 153, 204, 0.4);
-}
-
-.card h2 {
-  color: #cc0077;
-  font-family: 'Comic Neue', cursive;
-  margin-bottom: 1rem;
-}
-
-.card p {
-  color: #660066;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-/* Buttons */
-.btn {
-  background: linear-gradient(135deg, #ff90c2, #ffd1dc);
-  border: none;
-  padding: 12px 25px;
-  color: #4b0049;
-  border-radius: 30px;
-  font-family: 'Comic Neue', cursive;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 1.2rem;
-  font-size: 1rem;
-  box-shadow: 0 0 10px #ffcce6;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: linear-gradient(135deg, #ffcce6, #ffd6f0);
-  box-shadow: 0 0 15px #ff99cc, 0 0 25px #ffccff;
-  transform: scale(1.08);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1.5rem 0;
-  color:white;
-  font-size: 0.95rem;
-/*  background-color: #fff0f5;*/
- background-color: #cc66aa;
-  font-family: 'Comic Neue', cursive;
-  border-top: 2px dashed #ffaadd;
-}
-
-/* Float Label Inputs */
 .input-group {
   position: relative;
   width: 80%;
@@ -175,7 +215,7 @@ footer {
   font-size: 0.8rem;
   color: #aa3399;
 }
-/* SVG Icons */
+
 .input-group svg {
   position: absolute;
   top: 50%;
@@ -184,15 +224,6 @@ footer {
   fill: #ffaadd;
   width: 18px;
   height: 18px;
-}
-
-/* Shake Animation on Error */
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
 }
 
 input.error {
@@ -220,21 +251,56 @@ input.error {
   margin-top: 0.5rem;
 }
 
-/* Welcome Card Animation */
-@keyframes popIn {
-  0% { transform: scale(0.9); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+/* Intro Banner */
+.intro-banner {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #ffd6ff, #e7c6ff);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  animation: fadeInDown 1s ease-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Kids Theme Class */
-.kids-theme {
-  background: linear-gradient(135deg, #fceaff, #ffeaa7);
-  color: #4a004d;
-  font-family: 'Comic Neue', cursive;
+.intro-banner h2 {
+  font-size: 1.8rem;
+  color: #cc0077;
 }
 
-/* Add to your CSS file */
-/* ---------------------- Floating Doodles ---------------------- */
+.intro-banner p {
+  font-size: 1.1rem;
+  color: #660066;
+}
+
+/* Canvas Wrapper */
+.canvas-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,50 q30,30 60,0" fill="none" stroke="%23ffd1e699" stroke-width="2"/></svg>');
+  opacity: 0.2;
+}
+
+canvas {
+  background: #fff8fc;
+  border: 3px dashed #ffccff;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Floating Doodles */
 .doodle-container {
   position: fixed;
   top: 0;
@@ -242,36 +308,16 @@ input.error {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  footer {
-      z-index: 10;
-      position: relative; 
-  }
+  z-index: 1;
 }
 
 .doodle {
   position: absolute;
   animation: float 6s infinite ease-in-out;
   opacity: 0.2;
-  transition: all 0.5s;
+  font-size: 1.5rem;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(10deg); }
-}
-
-/* Add these new animations */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-
-/* Suggested Image Additions */
 .doodle.art-supplies {
   width: 60px;
   animation: float 4s infinite, spin 8s linear infinite;
@@ -287,42 +333,6 @@ input.error {
   animation: float 3s infinite, spin 5s linear infinite;
 }
 
-
-
-.btn:after {
-  content: '✨';
-  position: absolute;
-  right: -20px;
-  transition: all 0.3s;
-  opacity: 0;
-}
-
-.btn:hover:after {
-  right: 10px;
-  opacity: 1;
-}
-
-.canvas-wrapper{
-    position : relative;
-    overflow : hidden;
-}
-
-.canvas-wrapper::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,50 q30,30 60,0" fill="none" stroke="%23ffd1e699" stroke-width="2"/></svg>'); 
-}
-
-@keyframes bg-pulse {
-  0% { background-size: 100% 100%; }
-  100% { background-size: 150% 150%; }
-}
-
 /* Side Decorations */
 .side-decoration {
   position: fixed;
@@ -335,12 +345,14 @@ input.error {
 
 .side-decoration.left {
   left: 0;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,50 q30,30 60,0" fill="none" stroke="%23ffd1e699" stroke-width="2"/></svg>');
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,50 q30,30 60,0" fill="none" stroke="%23ffd1e699" stroke-width="2"/></svg>') no-repeat 20px 100px,
+              url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="30" fill="%23ff90c2" opacity="0.3"/></svg>') no-repeat 30px 300px;
 }
 
 .side-decoration.right {
   right: 0;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="%23ffd1e6" opacity="0.2"/></svg>');
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,50 q30,-30 60,0" fill="none" stroke="%23ffd1e699" stroke-width="2"/></svg>') no-repeat 20px 150px,
+              url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="30" width="40" height="40" fill="%23ffd1dc" opacity="0.3"/></svg>') no-repeat 30px 350px;
 }
 
 /* Animated Mascot */
@@ -360,6 +372,7 @@ input.error {
   background: #ff6b6b;
   border-radius: 50px 50px 0 0;
   position: relative;
+  margin: 0 auto;
 }
 
 .mascot-paintbrush {
@@ -368,7 +381,77 @@ input.error {
   height: 20px;
   background: #4ecdc4;
   transform: rotate(-30deg);
-  /*animation: brush-swing 3s infinite;*/
+  top: 80px;
+  left: -20px;
+  animation: brush-swing 3s infinite;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  color: white;
+  font-size: 0.95rem;
+  background-color: #cc66aa;
+  font-family: 'Comic Neue', cursive;
+  border-top: 2px dashed #ffaadd;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.background-decor .bg-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,30 v40 M30,50 h40" fill="none" stroke="%23ffccff" stroke-width="2"/></svg>') repeat;
+  opacity: 0.03;
+  z-index: -1;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  0% { transform: translateY(-30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
 }
 
 @keyframes bounce {
@@ -382,34 +465,94 @@ input.error {
   100% { transform: rotate(-35deg); }
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
 
-@keyframes shine {
-  100% { transform: translateX(100%); }
-}
-
-@keyframes btn-shine {
-  100% { transform: translateX(100%); }
-}
-
-.intro-banner{
-    background: linear-gradient(135deg, #ffd6ff, #e7c6ff);
-    padding: 2rem;
-    border-radius: 20px;
+  header.dashboard-header {
+    flex-direction: column;
     text-align: center;
-    animation: fadeInDown 1s ease-out;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1rem;
+  }
+
+  header.dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  header.dashboard-header nav {
+    margin-top: 0.5rem;
+  }
+
+  header.dashboard-header nav a,
+  header.dashboard-header nav span {
+    margin: 0 0.5rem;
+  }
+
+  .welcome-mascot {
+    width: 120px;
+    height: 180px;
+    right: 2%;
+    top: -30px;
+  }
+
+  .mascot-body {
+    width: 60px;
+    height: 90px;
+  }
+
+  .mascot-paintbrush {
+    width: 50px;
+    height: 15px;
+    top: 50px;
+    left: -15px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  canvas {
+    max-width: 100%;
+  }
 }
 
-@keyframes fadeInDown{
-  0% { transform: translateY(-30px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+  .welcome-card {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 12px;
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+.welcome-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #8b3d3d;
+  border: 10px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#particle-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.4;
+
+.welcome-text {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
 }

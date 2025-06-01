@@ -63,12 +63,21 @@
       </div>
     <% } %>
 
-    <div class="card">
+<!--    <div class="card">
       <h2>Welcome, <%= email %>!</h2>
       <p>Explore your creative journey, check your past drawings or start a new one now.</p>
       <button class="btn" onclick="window.location.href='index.jsp'">New Drawing</button>
       <button class="btn" onclick="window.location.href='gallery.jsp'">Gallery</button>
+    </div>-->
+
+<div class="welcome-card">
+  <div class="welcome-circle">
+    <div class="welcome-text">
+      Welcome, <%= username != null ? username : "Artist" %>!
     </div>
+  </div>
+</div>
+
 
     <div class="card">
       <h2>Your Stats</h2>

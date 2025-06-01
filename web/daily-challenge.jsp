@@ -70,7 +70,7 @@
             <% if (userSubmissionUrl != null) { %>
                 <img src="<%= userSubmissionUrl %>" width="300" />
             <% } else if (challengeId != -1) { %>
-                <form action="uploadSubmission.jsp" method="post" enctype="multipart/form-data">
+                <form action="uploadSubmission" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="challengeId" value="<%= challengeId %>" />
                     <input class="input-field" type="file" name="submission" required />
                     <button class="btn" type="submit">Upload</button>
