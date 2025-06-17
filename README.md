@@ -56,8 +56,8 @@ Zenijah/
 ├── src/                    # Java source files (Servlets, Logic)
 │   └── com/
 │       └── zenijah/
-│           ├── controllers/
-│           ├── models/
+│           ├── api/
+│           ├── servlets/
 │           └── utils/
 ├── web/                    # Web application root (Tomcat's web content)
 │   ├── WEB-INF/            # Web config directory
