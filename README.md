@@ -95,16 +95,15 @@ Make sure you have:
 ### Register Page  
 ![Register](./screenshots/Zenijah-Register.png)
 
-### Manage User Page  
-![Manage User](./screenshots/Register-Students-Zenijah.png)
-
 ### Drawing Tool  
 ![Doodle Tool](./screenshots/Daily-Doodle-Challenge.png)
 
 ### Admin Panel  
 ![Admin Panel](./screenshots/Admin-Dashboard-Zenijah.png)
 
- 
+### Manage User Page  
+![Manage User](./screenshots/Register-Students.png)
+
 
 
 ### Installation
