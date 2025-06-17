@@ -1,0 +1,425 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Fredoka:wght@400;600&display=swap');
+
+/* Base Styling */
+body.dashboard {
+  background: linear-gradient(135deg, #c6f6ff, #ffe9a8);
+  color: #4b0049;
+  font-family: 'Comic Neue';
+  margin: 0;
+  padding: 0;
+  /*min-height: 100vh;*/
+  overflow-x: hidden;
+  height: 100%;
+  position: relative; 
+/*   display: flex;
+  flex-direction: column;*/
+}
+/* Input Fields */
+.input-field {
+  width: 80%;
+  padding: 14px;
+  margin: 12px auto;
+  border: 2px dashed #ffaad4;
+  border-radius: 16px;
+  background: #fff0f9;
+  color: #660066;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: #cc7ba2;
+  font-style: italic;
+}
+/* Header */
+header.dashboard-header {
+   background: linear-gradient(to right, #ffa3d7, #fddde6);
+  padding: 1.5rem 2.5rem;
+  display: flex; /* Enable flex layout */
+  justify-content: space-between; /* Push h1 left and nav right */
+  align-items: center; /* Center items vertically */
+  color: #660066;
+  font-family: 'Fredoka', sans-serif;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+}
+
+header.dashboard-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px #ffccf2;
+}
+
+header.dashboard-header nav a {
+  color: #660066;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header.dashboard-header nav a:hover {
+  color: #ff66aa;
+  text-shadow: 0 0 8px #ffaadd;
+}
+/* Dashboard Container */
+.dashboard-container {
+/*  display: flex;
+  flex-direction: column;*/
+  gap: 5rem;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+/* Card Styling */
+.card {
+  background: #fffaf5;
+  border: 3px dashed #ffcce6;
+  border-radius: 25px;
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3);
+  padding: 2rem;
+  background-color: cadetblue;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+}
+nav a, nav span {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ff92df;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(255, 153, 204, 0.4);
+}
+
+.card h2 {
+  color: #cc0077;
+  font-family: 'Comic Neue', cursive;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #660066;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+/* Buttons */
+.btn {
+  background: linear-gradient(135deg, #ff90c2, #ffd1dc);
+  border: none;
+  padding: 12px 25px;
+  color: #4b0049;
+  border-radius: 30px;
+  font-family: 'Comic Neue', cursive;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  box-shadow: 0 0 10px #ffcce6;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ffcce6, #ffd6f0);
+  box-shadow: 0 0 15px #ff99cc, 0 0 25px #ffccff;
+  transform: scale(1.08);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  color:white;
+  font-size: 0.95rem;
+/*  background-color: #fff0f5;*/
+ background-color: #cc66aa;
+  font-family: 'Comic Neue', cursive;
+  border-top: 2px dashed #ffaadd;
+}
+
+/* Float Label Inputs */
+.input-group {
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 12px 14px 40px;
+  border: 2px dashed #ffaadd;
+  background: #fff7fd;
+  color: #4b0049;
+  font-size: 1rem;
+  border-radius: 16px;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  color: #cc66aa;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: 8px;
+  font-size: 0.8rem;
+  color: #aa3399;
+}
+/* SVG Icons */
+.input-group svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: #ffaadd;
+  width: 18px;
+  height: 18px;
+}
+
+/* Shake Animation on Error */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+input.error {
+  animation: shake 0.4s;
+  border-color: #ff4d4d;
+}
+
+/* Special Welcome Card */
+.card.welcome-card {
+  background: #fff0fb;
+  border: 3px dashed #ffaaff;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
+  animation: popIn 1s ease;
+}
+
+.card.welcome-card h2 {
+  font-size: 1.8rem;
+  color: #ff66cc;
+}
+
+.card.welcome-card p {
+  font-size: 1.1rem;
+  color: #7a007a;
+  margin-top: 0.5rem;
+}
+
+/* Welcome Card Animation */
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Kids Theme Class */
+.kids-theme {
+  background: linear-gradient(135deg, #fceaff, #ffeaa7);
+  color: #4a004d;
+  font-family: 'Comic Neue', cursive;
+}
+
+/* Add to your CSS file */
+/* ---------------------- Floating Doodles ---------------------- */
+.doodle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  footer {
+      z-index: 10;
+      position: relative; 
+  }
+}
+
+.doodle {
+  position: absolute;
+  animation: float 6s infinite ease-in-out;
+  opacity: 0.2;
+  transition: all 0.5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* Add these new animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Suggested Image Additions */
+.doodle.art-supplies {
+  width: 60px;
+  animation: float 4s infinite, spin 8s linear infinite;
+}
+
+.doodle.animal {
+  width: 80px;
+  animation: float 5s infinite, pulse 2s ease-in-out infinite;
+}
+
+.doodle.star {
+  width: 40px;
+  animation: float 3s infinite, spin 5s linear infinite;
+}
+
+
+
+.btn:after {
+  content: '✨';
+  position: absolute;
+  right: -20px;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.btn:hover:after {
+  right: 10px;
+  opacity: 1;
+}
+
+.canvas-wrapper{
+    position : relative;
+    overflow : hidden;
+}
+
+.canvas-wrapper::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,50 q30,30 60,0" fill="none" stroke="%23ffd1e699" stroke-width="2"/></svg>'); 
+}
+
+@keyframes bg-pulse {
+  0% { background-size: 100% 100%; }
+  100% { background-size: 150% 150%; }
+}
+
+/* Side Decorations */
+.side-decoration {
+  position: fixed;
+  top: 0;
+  width: 150px;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.side-decoration.left {
+  left: 0;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,50 q30,30 60,0" fill="none" stroke="%23ffd1e699" stroke-width="2"/></svg>');
+}
+
+.side-decoration.right {
+  right: 0;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="%23ffd1e6" opacity="0.2"/></svg>');
+}
+
+/* Animated Mascot */
+.welcome-mascot {
+  position: absolute;
+  right: 5%;
+  top: -50px;
+  width: 200px;
+  height: 300px;
+  z-index: 2;
+  animation: bounce 2s infinite;
+}
+
+.mascot-body {
+  width: 100px;
+  height: 150px;
+  background: #ff6b6b;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+}
+
+.mascot-paintbrush {
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  background: #4ecdc4;
+  transform: rotate(-30deg);
+  /*animation: brush-swing 3s infinite;*/
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes brush-swing {
+  0% { transform: rotate(-35deg); }
+  50% { transform: rotate(-25deg); }
+  100% { transform: rotate(-35deg); }
+}
+
+
+@keyframes shine {
+  100% { transform: translateX(100%); }
+}
+
+@keyframes btn-shine {
+  100% { transform: translateX(100%); }
+}
+
+.intro-banner{
+    background: linear-gradient(135deg, #ffd6ff, #e7c6ff);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeInDown{
+  0% { transform: translateY(-30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.4;
+}
+.background-decor .bg-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.03;
+  width: 100%;
+  z-index: -1;
+}

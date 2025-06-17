@@ -24,7 +24,7 @@
   <div class="dashboard-container">
     <div class="card">
       <h2>You have successfully logged out!</h2>
-      <p>Come back soon, artist 🖋️</p>
+      <!--<p>Come back soon, artist 🖋️</p>-->
       <a href="login.jsp" class="btn">Login Again</a>
     </div>
   </div>

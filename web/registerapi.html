@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Bulk Registration</title>
+</head>
+<body>
+  <button onclick="sendData()">Register Students</button>
+
+  <script>
+    function sendData() {
+      const data = [
+        {
+          name: "Khadijah",
+          email: "khadijah@example.com",
+          password: "abc123"
+        },
+        {
+          name: "Zenijah",
+          email: "zenijah@example.com",
+          password: "xyz789"
+        }
+      ];
+
+      fetch('http://localhost:8080/Zenijah_/BulkStudentRegistrationServlet', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(result => console.log(result))
+      .catch(error => console.error("Error:", error));
+    }
+  </script>
+</body>
+</html>

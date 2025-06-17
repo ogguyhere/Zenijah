@@ -26,7 +26,7 @@
     <h1>👑 Zenijah Admin</h1>
     <nav>
       <a href="index.jsp">Home</a>
-      <a href="gallery.jsp">Gallery</a>
+      <!--<a href="gallery.jsp">Gallery</a>-->
       <a href="logout.jsp">Logout</a>
     </nav>
   </header>
@@ -54,7 +54,16 @@
       <p>Total Users: <strong>123</strong></p>
       <p>Artwork Uploaded: <strong>256</strong></p>
     </div>
+      
+       <div class ="card">
+          <h2>Register Students in Bulk</h2>
+          <a href="resgisterapi.jsp" class="btn" > Go to the Page</a>
+          
+          
+      </div>
   </div>
+      
+     
 
   <footer>
     &copy; 2025 <strong>Zenijah</strong>. Made with 🖤 & 🎨 by Khadijah.

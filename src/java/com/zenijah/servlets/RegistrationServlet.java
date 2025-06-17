@@ -44,6 +44,7 @@ public class RegistrationServlet extends HttpServlet {
             response.sendRedirect("login.jsp");
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.print(e);
             response.sendRedirect("register.jsp?error=Registration failed. Please try again.");
         }
     }
