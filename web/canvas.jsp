@@ -206,7 +206,7 @@ button:hover {
     </header>-->
 <main class="vibrant-main">
     <h1 style="text-align: center">Daily Doodle Challenge: <%= challengeTitle %></h1>
-
+    <br><br>
     <div class="canvas-wrapper">
         <!-- Left: Your Doodle Canvas -->
         <div class="doodle-card">
@@ -242,7 +242,7 @@ button:hover {
     </div>
 
     <!-- Leaderboard Below -->
-    <div class="leaderboard-section">
+<!--    <div class="leaderboard-section">
         <h2>Leaderboard</h2>
         <table>
             <tr>
@@ -274,7 +274,7 @@ button:hover {
             %>
         </table>
     </div>
-</main>
+</main>-->
 
 <!--    <main class="vibrant-main">
         <h1 style="text-align: center">Daily Doodle Challenge: <%= challengeTitle %></h1>

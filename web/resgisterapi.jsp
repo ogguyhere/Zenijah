@@ -202,13 +202,15 @@
 
 <body class="dashboard">
   <header class="dashboard-header">
-    <h1>📋 Register Students</h1>
+    <h1>Zenijah</h1>
     <nav>
       <a href="admin-dashboard.jsp">Dashboard</a>
       <a href="logout.jsp">Logout</a>
     </nav>
   </header>
-
+    <br><br>
+    <h1 align="center"> Manage Users </h1>
+    <br><<br>
   <div class="form-container">
     <label>Name</label>
     <input type="text" id="name" />
@@ -230,6 +232,7 @@
       <button class="btn" onclick="getAllStudents()">Get All (GET)</button>
       <button class="btn" onclick="updateStudent()">Update (PUT)</button>
       <button class="btn" onclick="deleteStudent()">Delete (DELETE)</button>
+      <br><br>
       <button class="btn" onclick="downloadJSON()">⬇️ Download JSON</button>
     </div>
 
@@ -257,7 +260,7 @@
   </div>
 
   <footer class="centered" style="margin-top: 60px;">
-    &copy; 2025 <strong>Zenijah</strong>. Made with 💖 by Khadijah.
+    &copy; 2025 <strong>Zenijah</strong>.Made by Kay
   </footer>
 </body>
 </html>

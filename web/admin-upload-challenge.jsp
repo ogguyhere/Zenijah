@@ -21,14 +21,16 @@
 </head>
 <body class = "dashboard">
     <header class = "dashboard-header">
-        <h1>🔐 Zenijah Login</h1>
+        <h1>🔐 Zenijah </h1>
         <nav>
           <a href="index.jsp">Home</a>
           <a href="logout.jsp">Logout</a>
         </nav>
     </header>
-
+    <br><br>    <br><br>
     <h1 style="text-align: center">Upload New Daily Challenge</h1>
+    
+        <br><br>    <br><br>
     <main class = "dashboard-container">
         <div class ="card">
             <form action="process-challenge-upload" method="post" enctype="multipart/form-data">
@@ -41,6 +43,9 @@
     </form>
         </div>
     </main>
-    
+         <br><br>    <br><br>    <br><br>   
+  <footer class="centered" style="margin-top: 60px;">
+    &copy; 2025 <strong>Zenijah</strong>.Made by Kay
+  </footer>
 </body>
 </html>

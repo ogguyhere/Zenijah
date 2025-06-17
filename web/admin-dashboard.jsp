@@ -30,7 +30,8 @@
       <a href="logout.jsp">Logout</a>
     </nav>
   </header>
-
+    <br><br><br><br>
+<br><br><br><br>
   <div class="dashboard-container">
     <div class="card">
       <h2 style = "color:white">Welcome, Admin <%= email %>!</h2>
@@ -47,26 +48,26 @@
       </div>
     </div>
       
-      <br><br><br>
+  
 
-    <div class="card">
-      <h2>📊 Platform Stats</h2>
-      <p>Total Users: <strong>123</strong></p>
-      <p>Artwork Uploaded: <strong>256</strong></p>
-    </div>
+  
       
        <div class ="card">
-          <h2>Register Students in Bulk</h2>
+           <br><br>
+           <br><br><!-- comment -->
+          <h2>Manage Users: </h2>
+          <br><br>
           <a href="resgisterapi.jsp" class="btn" > Go to the Page</a>
           
           
       </div>
   </div>
       
-     
-
+     <br><br><br><br>
+     <br><br><br>
+     <br><br><br><br><br>
   <footer>
-    &copy; 2025 <strong>Zenijah</strong>. Made with 🖤 & 🎨 by Khadijah.
+    &copy; 2025 <strong>Zenijah</strong>  Made by Kay
   </footer>
 </body>
 </html>

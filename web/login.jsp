@@ -20,8 +20,9 @@
       <a href="register.jsp">Register</a>
     </nav>
   </header>
-
+    <br><br><br><br><br><br><br><br><br>
   <main class="dashboard-container">
+       
     <div class="card">
       <h2 style = "color: white"> Welcome Back Artist!</h2>
 
@@ -40,6 +41,7 @@
       </form>
     </div>
   </main>
+        <br><br><br><br><br><br><br><br><br><br><br>
 
   <footer>
     <p>&copy; 2025 Zenijah. Secure and Stylish ✨</p>

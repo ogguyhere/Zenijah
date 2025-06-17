@@ -11,6 +11,7 @@
   <title>Zenijah - Register</title>
   <link rel="stylesheet" href="main.css" />
 </head>
+
 <body class="dashboard">
   <header class="dashboard-header">
     <h1>📝 Zenijah Registration</h1>
@@ -19,7 +20,7 @@
       <a href="login.jsp">Login</a>
     </nav>
   </header>
-
+<br><br><br><br>
   <main class="dashboard-container">
     <div class="card">
       <h2>Create an Account</h2>
@@ -43,7 +44,7 @@
 
     </div>
   </main>
-
+    <br><br><br>
   <footer>
     <p>&copy; 2025 Zenijah. Unleash Your Creativity 💫</p>
   </footer>
